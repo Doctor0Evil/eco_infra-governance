@@ -1,6 +1,6 @@
 [package]
-name = "eco_infra_governance"
-version = "0.1.0"
+name = "ecoinfra-governance"
+version = "0.2.0"
 edition = "2021"
 
 [dependencies]
