@@ -2,14 +2,15 @@ use serde::{Deserialize, Serialize};
 use uuid::Uuid;
 
 use crate::nanopolygon::ValidatedNanopolygon;
-use super::device_class::AlnDeviceClass;
+use super::deviceclass::AlnDeviceClass;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct AlnShardHeader {
     pub shard_id: Uuid,
     pub source_device_class: AlnDeviceClass,
     pub target_device_class: AlnDeviceClass,
-    pub segment_label: String, // e.g., "eco-infra-routing".
+    /// Logical ALN segment label, e.g. "eco-infra-routing".
+    pub segment_label: String,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
